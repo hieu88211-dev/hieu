@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Gửi Crush Đáng Yêuu ❤️</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            padding-top: 30%;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+        h1 { color: #ff4d4d; font-size: 1.8em; padding: 0 20px; text-shadow: 1px 1px 2px #fff; }
+        .btn-container { margin-top: 40px; position: relative; width: 100%; height: 200px; }
+        button {
+            font-size: 1.1em; padding: 12px 28px; border: none;
+            border-radius: 25px; cursor: pointer; position: absolute;
+            font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            touch-action: manipulation;
+        }
+        #yesBtn { background-color: #ff4d4d; color: white; left: 15%; }
+        #noBtn { background-color: #95a5a6; color: white; right: 15%; transition: 0.1s; }
+    </style>
+</head>
+<body>
+
+    <h1>Cậu làm người yêu tớ nhé? 🥺❤️</h1>
+    
+    <div class="btn-container">
+        <button id="yesBtn" onclick="agree()">Đồng ý liền!</button>
+        <button id="noBtn" ontouchstart="moveButton()" onmouseover="moveButton()">Không nha</button>
+    </div>
+
+    <script>
+        function moveButton() {
+            const noBtn = document.getElementById('noBtn');
+            // Giới hạn vùng chạy của nút để không bị tràn ra ngoài màn hình điện thoại
+            const maxX = window.innerWidth - noBtn.offsetWidth - 20;
+            const maxY = window.innerHeight - noBtn.offsetHeight - 50;
+            
+            const randomX = Math.floor(Math.random() * maxX);
+            const randomY = Math.floor(Math.random() * maxY);
+            
+            noBtn.style.position = 'fixed';
+            noBtn.style.left = randomX + 'px';
+            noBtn.style.top = randomY + 'px';
+        }
+
+        function agree() {
+            alert("Hihi biết ngay mà! Nhắn tin cho tớ đi nhaaa 🥰❤️");
+            window.location.href = "https://m.me"; 
+        }
+    </script>
+</body>
+</html>
